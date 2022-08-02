@@ -1,21 +1,21 @@
 /*testing if can ovverride (.) for numbering list for ticket
 https://learnositysupport.zendesk.com/agent/tickets/20162*/
-.lrn > ol.custom  {
+.lrn-qe > ol  {
   list-style-type: none;
   margin-left: 0;
 }
 
-.lrn > ol.custom > li {
+.lrn-qe > ol > li {
   counter-increment: customlistcounter;
 }
 
-.lrn > ol.custom > li:before {
+.lrn-qe > ol > li:before {
   content: counter(customlistcounter) " ";
   font-weight: bold;
   float: left;
   width: 3em;
 }
 
-.lrn > ol.custom:first-child {
+.lrn-qe > ol:first-child {
   counter-reset: customlistcounter;
 }
