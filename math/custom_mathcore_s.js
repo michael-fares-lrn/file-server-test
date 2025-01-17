@@ -7,21 +7,17 @@ LearnosityAmd.define([
     var Scorer = function (question, response) {
         this.question = question;
         this.response = response;
+        this.mathcore = mathcore;
     };
 
     Scorer.prototype.isValid = function () {
-        // var i, temp,
-        //     isValid = true;
-        // for (i = 0; i < this.question.specs.length; i++) {
-        //     temp = mathcore.validate(this.question.specs[i], this.response);
-        //     console.log("mathcore", mathcore)
-        //     isValid = isValid && temp.result;
-        // }
-        if(typeof mathcore.validate === 'function') {
-            return true;
-        } else {
-            return false
+        var i, temp,
+            isValid = true;
+        for (i = 0; i < this.question.specs.length; i++) {
+            temp = this.mathcore.validate(this.question.specs[i], this.response);
+            isValid = isValid && temp.result;
         }
+        return isValid;
     };
 
     Scorer.prototype.score = function () {
