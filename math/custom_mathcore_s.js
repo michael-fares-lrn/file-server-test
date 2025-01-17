@@ -17,7 +17,7 @@ LearnosityAmd.define([
         //     console.log("mathcore", mathcore)
         //     isValid = isValid && temp.result;
         // }
-        if(mathcore) {
+        if(typeof mathcore.validate === 'function') {
             return true;
         } else {
             return false
