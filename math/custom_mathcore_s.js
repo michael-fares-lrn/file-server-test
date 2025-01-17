@@ -7,14 +7,13 @@ LearnosityAmd.define([
     var Scorer = function (question, response) {
         this.question = question;
         this.response = response;
-        this.mathcore = mathcore;
     };
 
     Scorer.prototype.isValid = function () {
         var i, temp,
             isValid = true;
         for (i = 0; i < this.question.specs.length; i++) {
-            temp = this.mathcore.validate(this.question.specs[i], this.response);
+            temp = mathcore.validate(this.question.specs[i], this.response);
             isValid = isValid && temp.result;
         }
         return isValid;
