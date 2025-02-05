@@ -13,7 +13,7 @@ LearnosityAmd.define([
         var i, temp,
             isValid = true;
         for (i = 0; i < this.question.specs.length; i++) {
-            temp = mathcore.validate(this.question.specs[i], this.response);
+            temp = mathcore.evaluateVerbose(this.question.specs[i], this.response);
             isValid = isValid && temp.result;
         }
         return isValid;
