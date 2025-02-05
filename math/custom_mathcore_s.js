@@ -14,7 +14,7 @@ LearnosityAmd.define([
             isValid = true;
         for (i = 0; i < this.question.specs.length; i++) {
             // if scorer is in server side, then use mathcore.evaluateVerbose()
-            if(typeof window === undefined)  {
+            if(typeof mathcore.validate !== 'function')  {
                 temp = mathcore.evaluateVerbose(this.question.specs[i], this.response);
             } else {
                 // if the scorer is running on the client side, then use mathcore.validate()
