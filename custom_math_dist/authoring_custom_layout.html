@@ -1,0 +1,71 @@
+<div class="lrn-qe-edit-form">
+    <span data-lrn-qe-label="stimulus"></span>
+    <span data-lrn-qe-input="stimulus" class="lrn-qe-ckeditor-lg"></span>
+
+    <span data-lrn-qe-label="template"></span>
+    <span data-lrn-qe-input="template" class="lrn-qe-ckeditor-lg"></span>
+
+
+
+    <span data-lrn-qe-label="validation.valid_response"></span>
+    <!-- loop for each item in the validation.valid_response.value array, to allow for dynamically updating it's quesiton JSON when the author adds a new response-->
+
+        <div class="lrn-qe-accordion" data-lrn-qe-accordion>
+            <div data-lrn-qe-loop="validation.valid_response.value[*]" class="lrn-qe-accordion-item">
+                <div class="lrn-qe-accordion-header" data-lrn-qe-accordion-header>
+                    
+                    <div class="lrn-qe-accordion-header-inner">
+                        <span class="lrn-qe-i-arrow lrn-qe-inline-block"></span>
+                            <!-- [*] at the end for the {{index}} from qe-init-options to populate correctly-->
+                            <span data-lrn-qe-label="validation.valid_response.value[*]" class="lrn-qe-accordion-label"></span>
+                            <!--  -->
+                    </div>
+                        <!-- trashcan button -->
+                        <span data-lrn-qe-action-remove="validation.valid_response.value[*]" class="lrn-qe-accordion-btn-remove"></span>
+                </div>
+        
+                <div class="lrn-qe-accordion-body" data-lrn-qe-accordion-body>
+                        
+                        
+                            <span data-lrn-qe-label="validation.valid_response.value[*].value"></span>
+                            <span data-lrn-qe-input="validation.valid_response.value[*].value"></span>
+
+                            <span data-lrn-qe-label="validation.valid_response.value[*].method"></span>
+                            <span data-lrn-qe-input="validation.valid_response.value[*].method"></span>
+                </div>
+            </div>
+        
+
+        <!-- <span data-lrn-qe-action-remove="validation.valid_response.value[*]"></span>
+
+        <span data-lrn-qe-label="validation.valid_response.value[*]"></span>
+
+        <span data-lrn-qe-input="validation.valid_response.value[*].value"></span>
+
+        <span data-lrn-qe-label="validation.valid_response.value[*].method"></span>
+        <span data-lrn-qe-input="validation.valid_response.value[*].method"></span> -->
+
+    </div>
+    <!-- span for the leanosity ADD button that will add a new field for a new value the author can add to the validation.valid_response.value array of the quesiton JSON -->
+    <span data-lrn-qe-action-add="validation.valid_response.value"></span>
+ 
+
+    
+
+    <h4 class="lrn-qe-heading" data-lrn-qe-adv-toggle>
+        <button type="button" class="lrn-qe-form-label lrn-qe-margin-top-none lrn-qe-more-options" data-lrn-qe-section="more_options.heading">
+            <span class="lrn-qe-i-arrow lrn-qe-inline-block" data-lrn-qe-section="more_options.toggle"></span>
+            <span class="lrn-qe-inline-block lrn-qe-text-bold">
+                <label class="lrn-qe-label lrn-qe-form-label-name" data-lrn-qe-i18n-label="heading.moreOptions" value="More options"></label>
+            </span>
+        </button>
+    </h4>
+    <div data-lrn-qe-adv-content data-lrn-qe-section="more_options.content">
+        <div class="lrn-qe-row-flex" data-lrn-qe-layout-wrapper>
+            <div class="lrn-qe-col-xs-12 lrn-qe-col-sm-6">
+                <span data-lrn-qe-input="instant_feedback" class="lrn-qe-inline-block"></span>
+                <span data-lrn-qe-label="instant_feedback" class="lrn-qe-inline-block"></span>
+            </div>
+        </div>
+    </div>
+</div>
