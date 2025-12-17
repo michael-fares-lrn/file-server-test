@@ -1,31 +1,3 @@
-
-/* AUTHOR API */ 
-/* Green border around all views, every other item/activity in list yellow bg */
-.lrn.lrn-author {
-    outline: 10px solid green;
-    background-color: yellow;
-}
-
-/*ITEMS API*/
-/* Pink border around player, start button pink */
-.lrn.lrn-assess {
-    outline: 10px solid pink;
-}
-
-.lrn.lrn-assess .app-layout .lrn_btn_blue:after {
-    background-color: pink;
-}
-
-/*QUESTIONS API*/
-/*Question stimulus large red font*/
-.lrn_stimulus {
-    color: red;
-    font-size: 40px;
-}
-
-/* REPORTS */
-/*top level selector shared by all report types*/
-/*All reports blue background, stimulus in questions also red inherited from above*/
-.learnosity-report {
-    background-color: royalblue;
+.lrn.lrn-author .cke_combopanel__styles {
+    width: max-content;
 }
