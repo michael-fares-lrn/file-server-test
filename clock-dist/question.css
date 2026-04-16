@@ -1,0 +1,54 @@
+/*!************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!../scss/main.scss ***!
+  \************************************************************************************************************/
+.lrn-clock {
+  /* add standard lrn validation colors to the face as well */
+}
+.lrn-clock .main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.lrn-clock .face {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+  transition: ease all 0.3s;
+}
+.lrn-clock .face.lrn_correct {
+  stroke: #4a700a;
+  stroke-width: 7;
+}
+.lrn-clock .face.lrn_incorrect {
+  stroke: #dd002f;
+  stroke-width: 7;
+}
+.lrn-clock .hand {
+  fill: black;
+  stroke: black;
+  stroke-width: 10;
+  cursor: move;
+}
+.lrn-clock .tick {
+  fill: black;
+  stroke: black;
+  stroke-width: 6;
+}
+.lrn-clock .hour {
+  fill: black;
+  font-size: 2em;
+}
+.lrn-clock .anchor {
+  fill: #777;
+}
+.lrn-clock .big-hand-circle, .lrn-clock .small-hand-circle {
+  stroke: royalblue;
+  fill: none;
+}
+.lrn-clock svg.disabled, .lrn-clock .hand.disabled {
+  cursor: not-allowed;
+}
+.lrn-clock svg text {
+  user-select: none;
+}
