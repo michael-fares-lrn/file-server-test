@@ -1,0 +1,58 @@
+/*!************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!../scss/main.scss ***!
+  \************************************************************************************************************/
+.lrn-shapes {
+  /*********************************************************
+  Write any CSS styling rules for your custom question HERE. 
+  There is no need to create your own file called question.css 
+  Based on the CSS you write here, the question.css file will be generated 
+  automatically for you by webpack when you build the production version of your question by running yarn-prod. 
+  ************************************************************/
+  /* HTML: <button class="triangle"></button> */
+  /* HTML: <button class="hexagon"></button> */
+}
+.lrn-shapes .flex-row {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+.lrn-shapes .flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lrn-shapes .octagon {
+  aspect-ratio: 1;
+  --o: calc(50%*tan(-22.5deg));
+  clip-path: polygon(var(--o) 50%, 50% var(--o), calc(100% - var(--o)) 50%, 50% calc(100% - var(--o)));
+}
+.lrn-shapes button {
+  border: none;
+  cursor: pointer;
+}
+.lrn-shapes .triangle {
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.lrn-shapes .hexagon {
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(50% -50%, 100% 50%, 50% 150%, 0 50%);
+}
+.lrn-shapes .circle {
+  clip-path: circle(50%);
+}
+.lrn-shapes .shape-wrapper {
+  padding: 0.25rem;
+}
+.lrn-shapes .shape-wrapper:has(button.selected) {
+  outline: 3px solid;
+}
+.lrn-shapes .shape-wrapper:has(button[disabled=true]) {
+  cursor: not-allowed;
+}
+.lrn-shapes .shape-wrapper:has(button[disabled=true]) button {
+  cursor: not-allowed;
+}
