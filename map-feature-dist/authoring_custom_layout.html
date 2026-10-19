@@ -1,0 +1,69 @@
+<div class="lrn-qe-edit-form">
+    <!-- Title -->
+    <span data-lrn-qe-label="title"></span>
+    <span data-lrn-qe-input="title"></span>
+
+    <!-- Initial view -->
+    <div class="lrn-qe-row-flex">
+        <div class="lrn-qe-col-xs-12 lrn-qe-col-sm-4">
+            <span data-lrn-qe-label="center_lat"></span>
+            <span data-lrn-qe-input="center_lat"></span>
+        </div>
+        <div class="lrn-qe-col-xs-12 lrn-qe-col-sm-4">
+            <span data-lrn-qe-label="center_lng"></span>
+            <span data-lrn-qe-input="center_lng"></span>
+        </div>
+        <div class="lrn-qe-col-xs-12 lrn-qe-col-sm-4">
+            <span data-lrn-qe-label="zoom"></span>
+            <span data-lrn-qe-input="zoom"></span>
+        </div>
+    </div>
+
+    <!-- Markers -->
+    <div class="lrn-qe-divider"></div>
+    <span data-lrn-qe-label="markers" class="lrn-qe-text-bold"></span>
+    <div class="lrn-qe-divider"></div>
+    <div data-lrn-qe-loop="markers[*]" class="lrn-qe-row-flex">
+        <div class="lrn-col-xs-6 lrn-qe-col-sm-6">
+            <span data-lrn-qe-label="markers[*]"></span>
+        </div>
+        <div class="lrn-col-xs-6 lrn-qe-col-sm-6">
+            <span data-lrn-qe-action-remove="markers[*]"></span>
+        </div>
+        <div class="lrn-qe-col-xs-12 lrn-qe-col-sm-3">
+            <span data-lrn-qe-label="markers[*].lat"></span>
+            <span data-lrn-qe-input="markers[*].lat"></span>
+        </div>
+        <div class="lrn-qe-col-xs-12 lrn-qe-col-sm-3">
+            <span data-lrn-qe-label="markers[*].lng"></span>
+            <span data-lrn-qe-input="markers[*].lng"></span>
+        </div>
+        <div class="lrn-qe-col-xs-12 lrn-qe-col-sm-6">
+            <span data-lrn-qe-label="markers[*].label"></span>
+            <span data-lrn-qe-input="markers[*].label"></span>
+        </div>
+    </div>
+    <span data-lrn-qe-action-add="markers"></span>
+
+    <!-- Display & tile provider options -->
+    <h4 class="lrn-qe-heading" data-lrn-qe-adv-toggle>
+        <button type="button" class="lrn-qe-form-label lrn-qe-margin-top-none lrn-qe-more-options" data-lrn-qe-section="more_options.heading">
+            <span class="lrn-qe-i-arrow lrn-qe-inline-block" data-lrn-qe-section="more_options.toggle"></span>
+            <span class="lrn-qe-inline-block lrn-qe-text-bold">
+                <label class="lrn-qe-label lrn-qe-form-label-name" data-lrn-qe-i18n-label="heading.moreOptions" value="More options"></label>
+            </span>
+        </button>
+    </h4>
+    <div data-lrn-qe-adv-content data-lrn-qe-section="more_options.content">
+        <div class="lrn-qe-row-flex">
+            <div class="lrn-qe-col-xs-12 lrn-qe-col-sm-4">
+                <span data-lrn-qe-label="height"></span>
+                <span data-lrn-qe-input="height"></span>
+            </div>
+        </div>
+        <span data-lrn-qe-label="tile_url"></span>
+        <span data-lrn-qe-input="tile_url"></span>
+        <span data-lrn-qe-label="attribution"></span>
+        <span data-lrn-qe-input="attribution"></span>
+    </div>
+</div>
